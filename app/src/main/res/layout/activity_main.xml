@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_pantalla"
+    android:weightSum="1"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 and O by Mikel"
+            android:textAllCaps="true"
+            android:textStyle="bold" />
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="20dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/unjug"
+                style="@style/boton"
+                android:onClick="start"
+                android:text="1 Jugador" />
+            <RadioGroup
+                android:id="@+id/radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/facil"
+                    style="@style/radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Facil" />
+
+                <RadioButton
+                    android:id="@+id/medio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Medio"
+                    style="@style/radio"/>
+                <RadioButton
+                    android:id="@+id/impo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Imposible"
+                    style="@style/radio"/>
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/dosjug"
+                style="@style/boton"
+                android:text="2 Jugadores"
+                android:onClick="start"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <GridLayout
+
+        android:id="@+id/grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:columnCount="3"
+        android:rowCount="3">
+
+        <ImageView
+            android:id="@+id/a1"
+            style="@style/casilla"
+            android:onClick="setXO" />
+
+        <ImageView
+            android:id="@+id/a2"
+            style="@style/casilla"
+            android:onClick="setXO"
+            android:src="@drawable/aspa" />
+
+        <ImageView
+            android:id="@+id/a3"
+            style="@style/casilla"
+            android:onClick="setXO" />
+
+        <ImageView
+            android:id="@+id/b1"
+            style="@style/casilla"
+            android:onClick="setXO" />
+
+        <ImageView
+            android:id="@+id/b2"
+            style="@style/casilla"
+            android:onClick="setXO"
+            android:src="@drawable/circulo" />
+
+        <ImageView
+            android:id="@+id/b3"
+            style="@style/casilla"
+            android:onClick="setXO" />
+
+        <ImageView
+            android:id="@+id/c1"
+            style="@style/casilla"
+            android:onClick="setXO"
+            android:src="@drawable/aspa" />
+
+        <ImageView
+            android:id="@+id/c2"
+            style="@style/casilla"
+            android:onClick="setXO" />
+
+        <ImageView
+            android:id="@+id/c3"
+            style="@style/casilla"
+            android:onClick="setXO" />
+
+
+    </GridLayout>
+
+
+</LinearLayout>
